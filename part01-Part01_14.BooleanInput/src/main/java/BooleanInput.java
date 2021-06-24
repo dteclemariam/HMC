@@ -7,6 +7,9 @@ public class BooleanInput {
         Scanner scanner = new Scanner(System.in);
 
         // write your program here
+        System.out.println("Write something:");
+        boolean bol = Boolean.valueOf(scanner.next());
+        System.out.println("True or false? " + bol);
 
     }
 }
