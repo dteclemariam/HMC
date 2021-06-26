@@ -6,5 +6,18 @@ public class LargerThanOrEqualTo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scan.next());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scan.next());
+
+        if (first == second){
+            System.out.println("The numbers are equal!");
+        }else{
+            //Using ternary operator
+            int greaterNumb = (first > second)?first : second;
+            System.out.println("Greater number is: " + greaterNumb);
+        }
+
     }
 }
