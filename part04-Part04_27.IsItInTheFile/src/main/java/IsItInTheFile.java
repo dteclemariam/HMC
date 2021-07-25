@@ -1,5 +1,6 @@
 
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class IsItInTheFile {
@@ -13,5 +14,27 @@ public class IsItInTheFile {
         System.out.println("Search for:");
         String searchedFor = scanner.nextLine();
 
+        ArrayList<String> list = new ArrayList<>();
+
+        boolean found = false;
+
+        try {
+            Scanner fileReader = new Scanner(Paths.get(file));
+
+            while (fileReader.hasNextLine()){
+                if (fileReader.nextLine().equals(searchedFor)){
+                    found = true;
+                }
+            }
+
+        }catch (Exception e){
+            System.out.println("Reading the file " + file + " failed");
+        }
+
+        if (found){
+            System.out.println("Found!");
+        }else{
+            System.out.println("Not found.");
+        }
     }
 }
