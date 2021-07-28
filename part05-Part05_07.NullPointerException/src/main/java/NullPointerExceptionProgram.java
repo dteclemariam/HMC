@@ -21,5 +21,9 @@ public class NullPointerExceptionProgram {
             index++;
         }
 
+        lines = null;
+
+        System.out.println(lines.size());;
+
     }
 }

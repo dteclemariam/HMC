@@ -16,6 +16,11 @@ public class PaymentCard {
     }
 
     public boolean takeMoney(double amount) {
+
+        if (balance - amount >= 0){
+            balance -= amount;
+            return true;
+        }
         // implement the method so that it only takes money from the card if
         // the balance is at least the amount parameter.
         // returns true if successful and false otherwise
