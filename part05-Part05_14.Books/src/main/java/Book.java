@@ -17,4 +17,9 @@ public class Book {
         return publicationYear;
     }
 
+    //Solving it by comparing the toString methods for fun, and see if the to String returns identical strings
+    public String toString(){
+        return name + " ," + publicationYear;
+    }
+
 }

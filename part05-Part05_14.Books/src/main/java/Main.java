@@ -18,7 +18,18 @@ public class Main {
             System.out.println("Publication year:");
             int publicationYear = Integer.valueOf(scanner.nextLine());
             Book book = new Book(name, publicationYear);
-            books.add(book);
+
+            boolean found = false;
+
+            for (Book currentBook : books) {
+                if (currentBook.toString().equals(book.toString())){
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                books.add(book);
+            }
 
         }
         
