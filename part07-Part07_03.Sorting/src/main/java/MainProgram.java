@@ -16,25 +16,21 @@ public class MainProgram {
     }
 
     public static int indexOfSmallest(int [] array){
-        int smallest = array[0];
         int indexOfSmallest = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < smallest){
+            if (array[i] < array[indexOfSmallest]){
                 indexOfSmallest = i;
-                smallest = array[i];
             }
         }
         return indexOfSmallest;
     }
 
     public static int indexOfSmallestFrom(int [] array, int startIndex){
-        int smallest = array[startIndex];
         int indexOfSmallest = startIndex;
 
         for (int i = startIndex; i < array.length; i++) {
-            if (array[i] < smallest){
+            if (array[i] < array[indexOfSmallest]){
                 indexOfSmallest = i;
-                smallest = array[i];
             }
         }
         return indexOfSmallest;

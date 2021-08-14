@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Part07_03.Sorting" />
-        <module name="part07-Part07_03.Sorting" />
+        <module name="Part07_05.Searching" />
+        <module name="part07-Part07_05.Searching" />
       </profile>
     </annotationProcessing>
   </component>
