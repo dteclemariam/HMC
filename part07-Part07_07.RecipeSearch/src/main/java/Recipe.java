@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Recipe {
 
-    String name;
-    int cookingTime;
-    ArrayList<String> ingredients;
+    private String name;
+    private int cookingTime;
+    private ArrayList<String> ingredients;
 
     public Recipe(String name, int cookingTime, ArrayList<String> ingredients){
         this.name = name;
@@ -14,6 +14,14 @@ public class Recipe {
 
     public String getName() {
         return name;
+    }
+
+    public int getCookingTime() {
+        return cookingTime;
+    }
+
+    public ArrayList<String> getIngredients(){
+        return ingredients;
     }
 
     public String toString(){
