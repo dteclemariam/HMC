@@ -48,12 +48,13 @@ public class RecipeManager {
             if (line.isEmpty()){
                 Recipe recipe = new Recipe(name, cookingTime, ingredients);
                 recipes.add(recipe);
-                ingredients.clear();
+                ingredients = new ArrayList<>();
             }
 
             if (lineFromFile.indexOf(line) == lastLine){
                 Recipe recipe = new Recipe(name, cookingTime, ingredients);
                 recipes.add(recipe);
+                ingredients = new ArrayList<>();
             }
         }
     }

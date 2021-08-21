@@ -22,7 +22,6 @@ public class UserInterface {
         while (running){
             System.out.print("Enter command: ");
             String command = scanner.nextLine();
-            System.out.println("");
 
             switch (command){
                 case "list":
@@ -57,9 +56,11 @@ public class UserInterface {
     }
 
     private void listRecipes(){
+        System.out.println("");
         System.out.println("Recipes:");
         for (Recipe recipe : recipes) {
             System.out.println(recipe.toString());
+            System.out.println(recipe.getIngredients().toString());
         }
         System.out.println("");
     }
@@ -97,13 +98,13 @@ public class UserInterface {
         String searchWord = scanner.nextLine();
         System.out.println("");
         System.out.println("Recipes:");
-
         for (Recipe recipe : recipes) {
             ingredients = recipe.getIngredients();
-            if (ingredients.contains(searchWord)){
-                System.out.println(recipe.toString());
+            for (String ingredient : ingredients) {
+                if (ingredient.equals(searchWord)){
+                    System.out.println(recipe.toString());
+                }
             }
         }
-        System.out.println("");
     }
 }
