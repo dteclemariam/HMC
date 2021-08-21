@@ -24,6 +24,7 @@ public class Recipe {
         return ingredients;
     }
 
+    @Override
     public String toString(){
         return name + ", cooking time: " + cookingTime;
     }
