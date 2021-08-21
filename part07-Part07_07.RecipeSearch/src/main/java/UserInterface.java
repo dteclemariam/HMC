@@ -59,8 +59,7 @@ public class UserInterface {
         System.out.println("");
         System.out.println("Recipes:");
         for (Recipe recipe : recipes) {
-            System.out.println(recipe.toString());
-            System.out.println(recipe.getIngredients().toString());
+            System.out.println(recipe);
         }
         System.out.println("");
     }
@@ -72,7 +71,7 @@ public class UserInterface {
         System.out.println("Recipes:");
         for (Recipe recipe : recipes) {
             if (recipe.getName().contains(searchWord)){
-                System.out.println(recipe.toString());
+                System.out.println(recipe);
             }
         }
         System.out.println("");
@@ -86,24 +85,20 @@ public class UserInterface {
 
         for (Recipe recipe : recipes) {
             if (recipe.getCookingTime() <= maxTime){
-                System.out.println(recipe.toString());
+                System.out.println(recipe);
             }
         }
         System.out.println("");
     }
 
     private void searchByIngredient(){
-        ArrayList<String> ingredients;
         System.out.print("Ingredient: ");
         String searchWord = scanner.nextLine();
         System.out.println("");
         System.out.println("Recipes:");
         for (Recipe recipe : recipes) {
-            ingredients = recipe.getIngredients();
-            for (String ingredient : ingredients) {
-                if (ingredient.equals(searchWord)){
-                    System.out.println(recipe.toString());
-                }
+            if (recipe.getIngredients().contains(searchWord)){
+                System.out.println(recipe);
             }
         }
     }
