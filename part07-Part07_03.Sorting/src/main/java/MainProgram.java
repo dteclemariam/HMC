@@ -4,7 +4,8 @@ public class MainProgram {
 
     public static void main(String[] args) {
         // write your test code here
-        int[] array = {3, 1, 5, 99, 3, 12};
+        int[] numbers = {8, 3, 7, 9, 1, 2, 4};
+        MainProgram.sort(numbers);
     }
 
     public static int smallest(int [] array){
